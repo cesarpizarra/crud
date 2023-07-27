@@ -6,6 +6,7 @@ const RetrieveService = require("../services/retrieve");
 const UpdateService = require("../services/update");
 const DeleteService = require("../services/delete");
 
+// Create Router
 router.post("/create", async (req, res) => {
   const { username, password } = req.body;
 
@@ -24,6 +25,7 @@ router.post("/create", async (req, res) => {
   }
 });
 
+// Retrieve Router
 router.get(`/retrieve`, async (req, res) => {
   const { fields } = req.query;
 
@@ -39,6 +41,7 @@ router.get(`/retrieve`, async (req, res) => {
   }
 });
 
+// Update Router
 router.post(`/update`, async (req, res) => {
   const { id, newUsername, newPassword } = req.body;
 
@@ -57,6 +60,7 @@ router.post(`/update`, async (req, res) => {
   }
 });
 
+// Delete Router
 router.get(`/delete`, async (req, res) => {
   const { id } = req.query;
 
