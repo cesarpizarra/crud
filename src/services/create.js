@@ -4,7 +4,7 @@ const createAccount = async (username, password) => {
   try {
     const query =
       `INSERT INTO ` +
-      `users ` +
+      `Users ` +
       `VALUES ` +
       `(null, '${username}','${password}')`;
     connection(query);
